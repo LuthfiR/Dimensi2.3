@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+main(void)
+{
+    float s, r, t, hasil;
+    int rumus, i, lagi;
+
+    printf("\n\n");
+    for(i= 1 ; i <= 56 ; i++) { printf("^"); }
+
+    printf("\n\a\t\tD I M E N S I  2  &  3\n");
+    printf("\t\t\t\t\tLuthfi R-023\n\n\n\n");
+
+    do{
+
+    printf("Pilih \t\t: 1. Luas Lingkaran\n");
+    printf("\t\t  2. Volume Kubus\n");
+    printf("\t\t  3. Volume Tabung\n");
+
+        printf("\n\nPilih nomor \t: ");
+        scanf("%i", &rumus);
+
+        switch(rumus)
+        {
+            case 1: printf("\n\n\t\t\a'Luas lingkaran'");
+                    printf("\n\nMasukkan jari-jari\t: ");
+                    scanf("%f", &r);
+
+                        hasil = 3.14*(pow(r,2));
+                        printf("\a\nLuas lingkaran \t\t: %.2f ", hasil);
+            break;
+
+            case 2: printf("\n\n\t\t\a'Volume Kubus'");
+                    printf("\n\nMasukkan panjang sisi\t: ");
+                    scanf("%f", &s);
+
+                        hasil = pow(s,3);
+                        printf("\a\nVolume kubus\t\t: %.2f  ", hasil);
+            break;
+
+            case 3: printf("\n\n\t\t\a'Volume Tabung'");
+                    printf("\n\nMasukkan jari-jari\t : ");   scanf("%f", &r);
+                    printf("\nMasukkan tinggi tabung   : ");  scanf("%f", &t);
+
+                        hasil = t*(3.14*pow(r,2));
+                        printf("\a\nVolume tabung\t\t : %.2f ", hasil);
+            break;
+
+            default:printf("\n\aNomor pilihan salah!\n\a");
+        }
+
+            printf("\n\n\nCoba lagi? (1/0) : "); scanf("%i", &lagi); printf("\n\n");
+
+    }while(lagi == 1);
+
+    printf("\n\n\n\n");
+    for(i= 1 ; i <= 56 ; i++) { printf("^"); }
+    printf("\n\n");
+}
